@@ -1,0 +1,257 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&family=Poiret+One&display=swap");
+@import 'normalize.css';
+:root {
+  --color-body: #3F1802;
+  --color-highlight: #FF382C;
+  --font-body: "PT Sans", sans-serif;
+  --font-polaroid: "Poiret One", cursive;
+}
+
+.img img {
+  max-width: 100%;
+}
+
+body {
+  font-family: var(--font-body);
+  background-image: url(assets/bg.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100dvw;
+  width: 100vw;
+  min-height: 100dvh;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  color: var(--color-body);
+  font-size: 24px;
+}
+@media (min-width: 768px) {
+  body {
+    flex-direction: row;
+  }
+}
+body .content-wrap {
+  max-width: 1728px;
+  margin: 0 auto;
+  padding: 0 24px 72px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 72px;
+}
+@media (min-width: 768px) {
+  body .content-wrap {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    padding: 72px 24px;
+  }
+}
+body .content-wrap .logo-wrap {
+  padding: 72px 0;
+  flex-basis: auto;
+  position: relative;
+}
+@media (min-width: 768px) {
+  body .content-wrap .logo-wrap {
+    padding: 0 24px 72px;
+  }
+}
+body .content-wrap .logo-wrap::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 50% -24px auto;
+  border-bottom: 5px dashed #fff;
+}
+@media (min-width: 768px) {
+  body .content-wrap .logo-wrap::before {
+    inset: -72px 50% -72px auto;
+    border-left: 5px dashed #fff;
+  }
+}
+body .content-wrap .logo-wrap .logo {
+  background-color: var(--color-body);
+  border: 5px solid #fff;
+  padding: 24px;
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 226px;
+  margin-inline: auto;
+}
+@media (min-width: 768px) {
+  body .content-wrap main {
+    padding-inline: 24px;
+  }
+}
+body .content-wrap main .line {
+  position: absolute;
+  z-index: -1;
+  display: none;
+  width: 80%;
+}
+@media (min-width: 1200px) {
+  body .content-wrap main .line {
+    display: block;
+  }
+}
+body .content-wrap main .card {
+  background-color: #fff;
+  padding: 48px 48px 72px;
+  max-width: 720px;
+  line-height: 36px;
+  margin-inline: auto;
+  margin-bottom: 144px;
+  color: var(--color-body);
+  font-size: 24px;
+  position: relative;
+}
+@media (min-width: 1200px) {
+  body .content-wrap main .card.card1 {
+    margin-bottom: 260px;
+  }
+}
+body .content-wrap main .card.card1 .line1 {
+  content: url("assets/line1.png");
+  inset: 50% auto auto -165px;
+}
+@media (min-width: 1400px) {
+  body .content-wrap main .card.card1 .line1 {
+    inset: 35% auto auto -293px;
+  }
+}
+body .content-wrap main .card.card2 {
+  margin-bottom: 72px;
+  padding: 48px;
+}
+body .content-wrap main .card.card2 .line2 {
+  content: url("assets/line2.png");
+  inset: 66% 94px auto auto;
+  /* transform: rotate(-2deg); */
+  width: 90%;
+}
+@media (min-width: 1400px) {
+  body .content-wrap main .card.card2 .line2 {
+    inset: 66% -159px auto auto;
+  }
+}
+body .content-wrap main .card h2 {
+  text-align: center;
+  line-height: 150%;
+}
+body .content-wrap main .card p {
+  margin: 0;
+}
+body .content-wrap main .card .cta {
+  position: absolute;
+  padding: 16px 48px 22px;
+  font-size: 32px;
+  font-family: var(--font-polaroid);
+  color: #fff;
+  background-color: var(--color-highlight);
+  border: 5px solid #fff;
+  inset: auto calc(50% - 100px) calc(0% - 42px) auto;
+  white-space: nowrap;
+}
+body .content-wrap main .section {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin-bottom: 72px;
+}
+@media (min-width: 1200px) {
+  body .content-wrap main .section {
+    gap: 48px;
+    flex-wrap: nowrap;
+  }
+}
+@media (min-width: 1200px) {
+  body .content-wrap main .section > div.img {
+    flex-basis: 45%;
+  }
+  body .content-wrap main .section > div.text {
+    flex-basis: 55%;
+  }
+}
+@media (min-width: 1200px) {
+  body .content-wrap main .section.eye > div:first-child {
+    order: 2;
+  }
+}
+body .content-wrap main .section.eye .line3 {
+  content: url("assets/line3.png");
+  inset: 65% auto auto -169px;
+}
+@media (min-width: 1200px) {
+  body .content-wrap main .section.eye .line3 {
+    inset: 85% auto auto -18px;
+  }
+}
+body .content-wrap main .section .img {
+  margin-inline: auto;
+}
+body .content-wrap main .section .img img {
+  max-width: 250px;
+}
+@media (min-width: 1200px) {
+  body .content-wrap main .section .img img {
+    max-width: 100%;
+  }
+}
+body .content-wrap main .section h3 {
+  font-size: 36px;
+  font-weight: bold;
+}
+body .content-wrap main .polaroids {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin-bottom: 72px;
+}
+@media (min-width: 1200px) {
+  body .content-wrap main .polaroids {
+    flex-wrap: nowrap;
+  }
+}
+body .content-wrap main .polaroids .item {
+  background-color: #fff;
+  padding: 12px;
+  width: 100%;
+  max-width: 400px;
+  margin-inline: auto;
+  font-family: var(--font-polaroid);
+}
+body .content-wrap main .polaroids .item .img {
+  width: 100%;
+  aspect-ratio: 6/7;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-bottom: 12px;
+}
+body .content-wrap main .polaroids .item:first-child .img {
+  background-image: url(assets/emad.jpg);
+  background-size: cover;
+}
+body .content-wrap main .polaroids .item:nth-child(2) .img {
+  background-image: url(assets/nyc.jpg);
+  background-size: cover;
+}
+body .content-wrap main .polaroids .item:nth-child(3) .img {
+  background-image: url(assets/garden.jpg);
+  background-size: cover;
+}
+
+footer {
+  background-color: var(--color-body);
+  color: #fff;
+  text-align: center;
+  padding: 24px;
+}/*# sourceMappingURL=style.css.map */
