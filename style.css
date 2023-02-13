@@ -24,10 +24,11 @@ body {
   margin: 0;
   padding: 0;
   color: var(--color-body);
-  font-size: 24px;
+  font-size: 20px;
 }
 @media (min-width: 768px) {
   body {
+    font-size: 24px;
     flex-direction: row;
   }
 }
@@ -111,31 +112,44 @@ body .content-wrap main .card {
 }
 @media (min-width: 1200px) {
   body .content-wrap main .card.card1 {
-    margin-bottom: 260px;
+    margin-bottom: 315px;
+  }
+}
+@media (min-width: 1400px) {
+  body .content-wrap main .card.card1 {
+    margin-bottom: 360px;
   }
 }
 body .content-wrap main .card.card1 .line1 {
   content: url("assets/line1.png");
-  inset: 50% auto auto -165px;
+  inset: 54% auto auto -199px;
+  width: 650px;
 }
 @media (min-width: 1400px) {
   body .content-wrap main .card.card1 .line1 {
-    inset: 35% auto auto -293px;
+    inset: 35% auto auto -217px;
+    width: 820px;
   }
 }
 body .content-wrap main .card.card2 {
   margin-bottom: 72px;
   padding: 48px;
 }
+@media (min-width: 1400px) {
+  body .content-wrap main .card.card2 {
+    margin-bottom: 150px;
+  }
+}
 body .content-wrap main .card.card2 .line2 {
-  content: url("assets/line2.png");
-  inset: 66% 94px auto auto;
-  /* transform: rotate(-2deg); */
-  width: 90%;
+  content: url("assets/line2_w.png");
+  inset: 87% auto auto 100px;
+  width: 600px;
 }
 @media (min-width: 1400px) {
   body .content-wrap main .card.card2 .line2 {
-    inset: 66% -159px auto auto;
+    inset: 55% auto auto 225px;
+    transform: none;
+    width: 85%;
   }
 }
 body .content-wrap main .card h2 {
@@ -180,17 +194,37 @@ body .content-wrap main .section {
   }
 }
 @media (min-width: 1200px) {
+  body .content-wrap main .section.picture {
+    margin-bottom: 100px;
+  }
+}
+@media (min-width: 1200px) {
+  body .content-wrap main .section.eye {
+    margin-bottom: 100px;
+  }
   body .content-wrap main .section.eye > div:first-child {
     order: 2;
   }
 }
+@media (min-width: 1400px) {
+  body .content-wrap main .section.eye {
+    margin-bottom: 120px;
+  }
+}
 body .content-wrap main .section.eye .line3 {
   content: url("assets/line3.png");
-  inset: 65% auto auto -169px;
+  inset: 76% auto auto -42px;
 }
-@media (min-width: 1200px) {
+@media (min-width: 1400px) {
   body .content-wrap main .section.eye .line3 {
-    inset: 85% auto auto -18px;
+    inset: 73% auto auto -123px;
+    width: 90%;
+    max-width: 1000px;
+  }
+}
+@media (min-width: 1700px) {
+  body .content-wrap main .section.eye .line3 {
+    inset: 79% auto auto -42px;
   }
 }
 body .content-wrap main .section .img {
@@ -211,14 +245,19 @@ body .content-wrap main .section h3 {
 body .content-wrap main .polaroids {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: stretch;
   flex-wrap: wrap;
   gap: 24px;
-  margin-bottom: 72px;
+  margin-bottom: 150px;
 }
 @media (min-width: 1200px) {
   body .content-wrap main .polaroids {
     flex-wrap: nowrap;
+  }
+}
+@media (min-width: 1400px) {
+  body .content-wrap main .polaroids {
+    margin-bottom: 250px;
   }
 }
 body .content-wrap main .polaroids .item {
@@ -228,25 +267,30 @@ body .content-wrap main .polaroids .item {
   max-width: 400px;
   margin-inline: auto;
   font-family: var(--font-polaroid);
+  font-size: 20px;
+  font-weight: bold;
 }
 body .content-wrap main .polaroids .item .img {
   width: 100%;
-  aspect-ratio: 6/7;
-  -o-object-fit: cover;
-     object-fit: cover;
+  background-position: bottom;
+  background-size: cover;
+  aspect-ratio: 1;
   margin-bottom: 12px;
+}
+@media (min-width: 1400px) {
+  body .content-wrap main .polaroids .item .img {
+    aspect-ratio: 6/7;
+    background-position: center;
+  }
 }
 body .content-wrap main .polaroids .item:first-child .img {
   background-image: url(assets/emad.jpg);
-  background-size: cover;
 }
 body .content-wrap main .polaroids .item:nth-child(2) .img {
   background-image: url(assets/nyc.jpg);
-  background-size: cover;
 }
 body .content-wrap main .polaroids .item:nth-child(3) .img {
   background-image: url(assets/garden.jpg);
-  background-size: cover;
 }
 
 footer {
